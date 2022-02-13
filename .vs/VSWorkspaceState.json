@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\enum",
+    "\\src\\assets",
+    "\\src\\assets\\img",
+    "\\src\\assets\\img\\icons",
+    "\\src\\assets\\img\\icons\\smallScreen",
+    "\\src\\assets\\img\\icons\\smallScreen\\mainIconsForecast"
+  ],
+  "SelectedNode": "\\src\\app\\shared\\services\\forecast.service.ts",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 20px 0;
+}
+
+.containerForecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  .date {
+    text-align: center;
+  }
+
+  .temp {
+    text-align: center;
+    vertical-align: central;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  p {
+    margin: 16px 0;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    margin: 10px 0;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .containerForecast {
+    margin-bottom: 15px;
+    justify-content: space-between;
+  }
+
+  p {
+    margin: 0;
+    font-size: 10px;
+  }
+}

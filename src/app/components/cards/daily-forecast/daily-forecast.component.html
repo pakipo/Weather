@@ -1,0 +1,170 @@
+<div class="container">
+  <div class="cityDate">
+    <h2>{{city.name}}.{{getDate()}}</h2>
+  </div>
+  <!-- облачность скорость и направление ветра,давление влажность start -->
+  <div class="mainPar">
+    <div class="mainIcon">
+      <img [src]="iconPath +  mainIcon" />
+    </div>
+    <div class="wind par">
+      <p><b>Ветер:</b></p>
+      <div class="windSpeed">
+        <p>
+          {{ roundingValues(data['wind_speed'])}}-{{roundingValues(data['wind_gust'])}} м/c
+        </p>
+      </div>
+
+    </div>
+    <div class="directionWind  par">
+
+      <img [src]="iconPath + selectImgService.getdirectionWindIcon(data['wind_deg'])" />
+
+    </div>
+    <div class="pressure  par">
+      <p><b>Давление:</b></p>
+      <p>{{ roundingValues(data.pressure * 0.75)}}  мм рт.ст.</p>
+    </div>
+    <div class=" humidity  par">
+      <p><b>Влажность:</b></p>
+      <p>{{ roundingValues(data.humidity)}} %</p>
+    </div>
+  </div>
+  <!-- облачность скорость и направление ветра,давление влажность end -->
+  <div class="tempSun">
+    <div class="temp">
+      <!-- таблица температур (утро,день,вечер,ночь) start -->
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th> Температура, <span>&#8451;</span></th>
+            <th>
+              Ощущается как, <span>&#8451;</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Утро</b></td>
+
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data.temp.morn)" />
+                </span>{{roundingValues(data.temp.morn)}}
+              </p>
+            </td>
+
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data['feels_like'].morn)" />
+                </span>{{roundingValues(data['feels_like'].morn)}}
+              </p>
+            </td>
+
+          </tr>
+          <tr>
+            <td><b>День</b></td>
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data.temp.day)" />
+                </span> {{roundingValues(data.temp.day)}}
+              </p>
+            </td>
+
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data['feels_like'].day)" />
+                </span>{{roundingValues(data['feels_like'].day)}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Вечер</b></td>
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data.temp.eve)" />
+                </span>
+                {{roundingValues(data.temp.eve)}}
+              </p>
+
+            </td>
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data['feels_like'].eve)" />
+                </span>
+                {{roundingValues(data['feels_like'].eve)}}
+              </p>
+
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ночь</b></td>
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data.temp.night)" />
+                </span>
+                {{roundingValues(data.temp.night)}}
+              </p>
+
+            </td>
+            <td>
+              <p>
+                <span>
+                  <img [src]="iconPath + selectImgService.getTempIcon(data['feels_like'].night)" />
+                </span>
+                {{roundingValues(data['feels_like'].night)}}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- таблица температур(утро,день,вечер,ночь) end -->
+    </div>
+    <!-- восход-закат солнца start -->
+    <div class="sunriseset">
+      <div class="sunrise">
+
+        <img [src]="iconPath + 'sunrise.svg'" />
+        <p>
+          {{ getTimeSun(data.sunrise)}}
+        </p>
+      </div>
+      <div class="sunset">
+
+        <img [src]="iconPath + 'sunset.svg'" />
+        <p>
+          {{ getTimeSun(data.sunset)}}
+        </p>
+      </div>
+    </div>
+    <!-- восход-закат солнца end -->
+    <!-- восход-закат луны start -->
+    <div class="moonriseset">
+      <div class="moonrise">
+
+        <img [src]="iconPath + 'moonrise.svg'" />
+        <p>
+          {{ getTimeSun(data.moonrise)}}
+        </p>
+      </div>
+      <div class="moonset">
+
+        <img [src]="iconPath + 'moonset.svg'" />
+        <p>
+          {{ getTimeSun(data.moonset)}}
+        </p>
+      </div>
+    </div>
+    <!-- восход-закат луны end -->
+  </div>
+
+</div>
+

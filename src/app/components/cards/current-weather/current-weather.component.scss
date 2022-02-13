@@ -1,0 +1,339 @@
+
+$color: rgba(216,214,227,0.9);
+$padding: 20px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.borderContainer {
+  padding: 5px;
+}
+
+.containerCurrWeath {
+  position: relative;
+  color: $color;
+  padding: 20px 50px 10px 50px;
+  width: 100%;
+  border: 2px solid #aaa1a1;
+  border-radius: 5px;
+
+  .mainIcon {
+    position: absolute;
+    top: -60px;
+    right: 10%;
+  }
+
+  .city {
+    display: flex;
+    justify-content: start;
+    padding-top: 10px;
+
+    p {
+      font-family: sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: $color;
+    }
+
+    .date {
+      display: none;
+    }
+  }
+
+  .directionWind {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mainData {
+    display: flex;
+    justify-content: space-around;
+
+    .temp {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      p {
+        font-size: 35px;
+        text-align: center;
+
+        span {
+          vertical-align: bottom;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .tempFeel {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+
+      .info {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+
+      p {
+        font-size: 35px;
+        text-align: center;
+
+
+        span {
+          vertical-align: bottom;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .wind, .humidity, .pressure {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      p {
+        font-size: 35px;
+        text-align: center;
+
+        span {
+          width: 50px;
+          height: 50px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.containerCurrWeatherMobile {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .containerCurrWeath {
+    padding: 10px 40px 10px 40px;
+
+    .mainIcon {
+      top: -40px;
+      right: 8%;
+    }
+
+    .city {
+      p {
+        font-size: 32px;
+      }
+    }
+
+    .mainData {
+      .temp {
+        p {
+          font-size: 28px;
+
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .tempFeel {
+        .info {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 28px;
+          text-align: center;
+
+          span {
+            vertical-align: bottom;
+            font-size: 24px;
+          }
+        }
+      }
+
+      .wind, .humidity, .pressure {
+        p {
+          font-size: 28px;
+
+          span {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .containerCurrWeath {
+    padding: 7px 28px 7px 28px;
+
+    .mainIcon {
+      top: -20px;
+      right: 5%;
+    }
+
+    .city {
+      p {
+        font-size: 22.4px;
+      }
+    }
+
+    .mainData {
+      justify-content: space-between;
+
+      .temp {
+        font-size: 15px;
+
+        p {
+          font-size: 15px;
+
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+
+      .tempFeel {
+        .info {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 15px;
+          text-align: center;
+
+          span {
+            vertical-align: bottom;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .wind, .humidity, .pressure {
+        p {
+          font-size: 15px;
+
+          span {
+            width: 28px;
+            height: 28px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .containerCurrWeath {
+    .city {
+      display: flex;
+      flex-direction: column;
+
+      .date {
+        display: block;
+
+        p {
+          font-size: 17px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .containerCurrWeath {
+    display: none;
+  }
+
+  .containerCurrWeatherMobile {
+    display: block;
+    position: relative;
+    color: $color;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #aaa1a1;
+    border-radius: 5px;
+
+    .top {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+
+      .city {
+        display: flex;
+        justify-content: space-between;
+
+        .pCity {
+          margin-right: 10px;
+        }
+      }
+
+      .mainIcon {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+
+    .tempWrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: end;
+      border-bottom: 1px solid #aaa1a1;
+      padding-bottom: 5px;
+      font-size: 12px;
+
+      .temp {
+        p {
+          margin: 0;
+        }
+      }
+
+      .tempFeel {
+        .info, p {
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+
+    .mainDataWrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .containerCurrWeatherMobile {
+    .top {
+      font-size: 10px;
+    }
+
+    .tempWrap {
+      font-size: 10px;
+    }
+
+    .mainDataWrap {
+      font-size: 10px;
+    }
+  }
+}

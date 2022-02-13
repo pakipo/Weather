@@ -1,0 +1,219 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 1000px;
+  background-color: rgb(233,233,255,0.8);
+  -webkit-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+  -moz-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+  box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+  border-radius: 10px;
+  color: #202324;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 0 auto;
+
+  .cityDate {
+    text-align: center;
+  }
+
+  .mainPar {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid rgba(54,56,55,0.5);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tempSun {
+    display: flex;
+    justify-content: space-around;
+
+    .temp {
+      table {
+        width: 50%;
+
+        th, td {
+          padding: 0 20px 20px 20px;
+          text-align: center;
+
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            img {
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .sunriseset {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        margin-top: 10px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+
+    .moonriseset {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        margin-top: 10px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+  .container {
+    font-size: 15px;
+
+    .mainPar {
+      padding-bottom: 7px;
+      margin-bottom: 7px;
+
+      p {
+        margin: 5px;
+      }
+    }
+
+    .tempSun {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      .temp {
+        border-bottom: 2px solid rgba(54,56,55,0.5);
+        margin-bottom: 5px;
+
+        table {
+          width: 100%;
+
+          th, td {
+            padding: 0 16px 5px 16px;
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .sunriseset {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 5px;
+
+        .sunrise, .sunset {
+          -webkit-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          -moz-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+
+      .moonriseset {
+        flex-direction: row;
+        justify-content: space-around;
+
+        .moonrise, .moonset {
+          -webkit-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          -moz-box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          box-shadow: 0px 0px 9px 2px rgba(34, 60, 80, 0.5) inset;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    font-size: 13px;
+
+    .mainPar {
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+      }
+
+      .mainIcon {
+        width: 100%;
+
+        img {
+          padding-bottom: 10px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .tempSun {
+      .temp {
+        table {
+
+
+          th, td {
+            font-size: 13px;
+            padding: 0 5px 5px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    font-size: 11px;
+
+    .par {
+      margin: 5px;
+    }
+
+    .tempSun {
+      .temp {
+        table {
+          th, td {
+            font-size: 11px;
+            padding: 0 5px 5px 5px;
+          }
+        }
+      }
+
+      .sunriseset {
+
+        .sunrise, .sunset {
+          box-shadow: none;
+          padding: 0;
+        }
+      }
+
+      .moonriseset {
+        .moonrise, .moonset {
+          box-shadow: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

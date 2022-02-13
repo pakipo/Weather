@@ -1,0 +1,28 @@
+
+<div class="containerMain" *ngIf="load">
+  <div class="current">
+    <app-current-weather></app-current-weather>
+  </div>
+  <div class="borderContainer">
+    <div class="forecast" *ngIf="city">
+      <ng-container *ngFor="let item of forecastData">
+        <app-forecast [data]="item"></app-forecast>
+      </ng-container>
+    </div>
+
+    <div class="cityNotDefined" *ngIf="!city">
+      <h1>
+        Введите название города в поиск.
+      </h1>
+    </div>
+  </div>
+
+</div>
+
+<div class="preloader" *ngIf="!load">
+  <div>
+    <app-preloader></app-preloader>
+  </div>
+</div>
+
+

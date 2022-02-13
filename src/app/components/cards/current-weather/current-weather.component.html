@@ -1,0 +1,167 @@
+<ng-container *ngIf="load">
+
+
+  <div class="borderContainer">
+
+    <div class="containerCurrWeath">
+
+      <div class="mainIcon">
+        <img [src]="mainIcon" />
+      </div>
+
+      <div class="city">
+        <p>
+          {{data.name}},
+          <span>{{time}}</span>
+        </p>
+        <div class="date">
+          <p>{{this.date}}</p>
+        </div>
+
+      </div>
+
+      <div class="directionWind">
+        <p>
+          <span>
+            <img [src]=" directionWindIconPath + selectImgService.getdirectionWindIcon(data.wind.deg)" />
+          </span>
+        </p>
+      </div>
+
+      <div class="mainData">
+
+        <div class="temp">
+          <p>
+            <span>
+              <img [src]="iconPath + selectImgService.getTempIcon(data.main.temp)" />
+            </span>
+            {{  roundingValues(data.main.temp)}}
+            <span>&#8451;</span>
+          </p>
+        </div>
+
+        <div class="tempFeel">
+          <p class="info">Ощущается</p>
+          <p>
+            {{ roundingValues(data.main.feels_like)}}
+            <span>&#8451;</span>
+          </p>
+        </div>
+
+        <div class="wind">
+
+          <p class="pWind">
+            <span>
+              <img [src]="iconPath + selectImgService.getWindIcon(data.wind.speed)" />
+            </span>
+
+            {{roundingValues(data.wind.speed)}} м/c
+
+          </p>
+
+        </div>
+        <div class="humidity">
+          <p>
+            <span>
+              <img [src]="iconPath + 'humidityIcon.svg'" />
+            </span>
+
+            {{data.main.humidity}}%
+          </p>
+        </div>
+
+        <div class="pressure">
+          <p>
+            <span>
+              <img [src]="iconPath + 'barometer.svg'" />
+            </span>
+
+            {{ roundingValues(data.main.pressure * 0.75)}}mm
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <!-- для мобильных -->
+    <div class="containerCurrWeatherMobile">
+      <div class="top">
+
+        <div class="city">
+          <p class="pCity">
+            {{data.name}},
+            <span>{{time}}</span>
+          </p>
+          <div class="date">
+            <p>{{this.date}}</p>
+          </div>
+        </div>
+
+        <div class="mainIcon">
+          <img [src]="mainIcon" />
+        </div>
+
+      </div>
+
+      <div class="tempWrap">
+        <div class="temp">
+          <p>
+            <span>
+              <img [src]="iconPath + selectImgService.getTempIcon(data.main.temp)" />
+            </span>
+            {{  roundingValues(data.main.temp)}}
+            <span>&#8451;</span>
+          </p>
+        </div>
+
+        <div class="tempFeel">
+          <p class="info">Ощущается</p>
+          <p>
+            {{ roundingValues(data.main.feels_like)}}
+            <span>&#8451;</span>
+          </p>
+        </div>
+
+      </div>
+      <div class="mainDataWrap">
+
+        <div class="wind">
+          <p class="pWind">
+            <span>
+              <img [src]="iconPath + selectImgService.getWindIcon(data.wind.speed)" />
+            </span>
+            {{roundingValues(data.wind.speed)}} м/c
+          </p>
+        </div>
+
+        <div class="directionWind">
+          <p>
+            <span>
+              <img [src]=" directionWindIconPath + selectImgService.getdirectionWindIcon(data.wind.deg)" />
+            </span>
+          </p>
+        </div>
+
+        <div class="humidity">
+          <p>
+            <span>
+              <img [src]="iconPath + 'humidityIcon.svg'" />
+            </span>
+
+            {{data.main.humidity}}%
+          </p>
+        </div>
+
+        <div class="pressure">
+          <p>
+            <span>
+              <img [src]="iconPath + 'barometer.svg'" />
+            </span>
+
+            {{ roundingValues(data.main.pressure * 0.75)}}mm
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ng-container>

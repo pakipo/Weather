@@ -1,0 +1,19 @@
+<div class="containerDetails" *ngIf="load">
+  <div class="borderContainer">
+    <ng-container *ngIf="load">
+      <ngx-slick-carousel class="carousel"
+                          #slickModal="slick-carousel"
+                          [config]="slideConfig">
+        <ng-container ngxSlickItem *ngFor="let slide of data">
+          <app-daily-forecast [data]="slide" [city]="city" class="slide"></app-daily-forecast>
+        </ng-container>
+      </ngx-slick-carousel>
+    </ng-container>
+  </div>
+</div>
+
+<div class="preloader" *ngIf="!load">
+  <div>
+    <app-preloader></app-preloader>
+  </div>
+</div>

@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-menu-panel {
+  background: rgba(100, 100, 100,0.5);
+  -webkit-box-shadow: 1px 1px 34px -3px rgba(97, 97, 97, 0.34) inset;
+  -moz-box-shadow: 1px 1px 34px -3px rgba(97, 97, 97, 0.34) inset;
+  box-shadow: 1px 1px 34px -3px rgba(97, 97, 97, 0.34) inset;
+}
+ .mat-menu-item {
+    color: white;
+    font-weight:500;
+  }
+
+.buttonSerch {
+  .mat-icon-button {
+    width: 30px;
+    height: 23px;
+  }
+}
+
+
+.slick-track {
+  display: flex;
+ 
+
+}
+.slick-list {
+  overflow: hidden;
+ }
+
+.slide.slick-slide{
+    margin:10px;
+}
+
+.slider {
+  position: relative;
+  
+}
+.carousel .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index:10;
+  font-size:0 !important;
+ 
+}
+.carousel .slick-arrow.slick-prev {
+  left: 1%;
+  width: 20px;
+  height: 30px;
+  opacity: 0.7;
+}
+.carousel .slick-arrow.slick-next {
+  right: 1%;
+  width: 20px;
+  height: 30px;
+  opacity: 0.7;
+}
+
+:hover.slick-arrow.slick-prev, :hover.slick-arrow.slick-next {
+ opacity:1;
+}
+
+
+ 
