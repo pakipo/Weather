@@ -46,7 +46,7 @@
           p {
             display: flex;
             justify-content: center;
-            align-items: end;
+            align-items: flex-end;
 
             img {
               margin: 5px;
@@ -99,7 +99,7 @@
     .tempSun {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
 
       .temp {
         border-bottom: 2px solid rgba(54,56,55,0.5);

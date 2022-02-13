@@ -28,7 +28,7 @@ $padding: 20px;
 
   .city {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding-top: 10px;
 
     p {
@@ -55,7 +55,7 @@ $padding: 20px;
     .temp {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
 
       p {
         font-size: 35px;
@@ -71,7 +71,7 @@ $padding: 20px;
     .tempFeel {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
 
 
       .info {
@@ -95,7 +95,7 @@ $padding: 20px;
     .wind, .humidity, .pressure {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
 
       p {
         font-size: 35px;
@@ -293,7 +293,7 @@ $padding: 20px;
     .tempWrap {
       display: flex;
       justify-content: space-around;
-      align-items: end;
+      align-items:flex-end;
       border-bottom: 1px solid #aaa1a1;
       padding-bottom: 5px;
       font-size: 12px;
