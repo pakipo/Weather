@@ -27,8 +27,7 @@ export class CurrentDataService {
 
   getCurrentWeather(local: { lat: number, lon: number }) {
     return this.apiService.getCurrentWeatherData(local).pipe(map(res => {
-      let data = res as IData
-      console.log(data)
+      let data = res as IData;
       this.currentSunriseSunsetSubj.next({ sunrise: data.sys.sunrise, sunset: data.sys.sunset })
       return res
     }))

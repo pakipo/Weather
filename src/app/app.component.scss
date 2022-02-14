@@ -402,6 +402,10 @@
           height: 31.5px;
         }
       }
+
+      .content {
+        padding: 0;
+      }
     }
 
     footer {
@@ -417,12 +421,3 @@
   }
 }
 
-@media screen and (max-width: 300px) {
-  .containerApp {
-    .bcgBox {
-      .content {
-        padding: 0;
-      }
-    }
-  }
-}

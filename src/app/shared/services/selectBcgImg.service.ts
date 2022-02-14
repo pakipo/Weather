@@ -78,7 +78,7 @@ export class selectBcgImgService {
   }
   //часть  пути к icons в зависимости от разрешения экрана 
   getPathIcons() {
-    if (window.screen.width >= 980) {
+    if (document.documentElement.clientWidth >= 980) {
       return 'fullScreen'
     } else if (window.screen.width <= 980 && window.screen.width >= 768) {
       return 'tabletScreen'

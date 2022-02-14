@@ -14,8 +14,8 @@ import {
   styleUrls: ['./forecast.component.scss']
 })
 export class ForecastComponent implements OnInit, AfterViewInit {
-  sizeScreen: string = 'fullScreen';
-  mainIconPath: string = `../../../assets/img/icons/${this.sizeScreen}/mainIconsForecast/`
+  sizeScreen!: string;
+  mainIconPath!: string;
 
   constructor(
     private forecastService: ForecastService,
@@ -30,7 +30,7 @@ export class ForecastComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
     this.sizeScreen = this.selectImg.getPathIcons()
-    this.mainIconPath += this.data.icon
+    this.mainIconPath = `../../../assets/img/icons/${this.sizeScreen}/mainIconsForecast/${this.data.icon}`
   }
 
   ngAfterViewInit() {

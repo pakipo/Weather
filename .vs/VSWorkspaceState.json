@@ -3,14 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\enum",
-    "\\src\\assets",
-    "\\src\\assets\\img",
-    "\\src\\assets\\img\\icons",
-    "\\src\\assets\\img\\icons\\smallScreen",
-    "\\src\\assets\\img\\icons\\smallScreen\\mainIconsForecast"
+    "\\src\\app\\components",
+    "\\src\\app\\components\\cards",
+    "\\src\\app\\components\\cards\\forecast",
+    "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\shared\\services\\forecast.service.ts",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class ApiRequestService {
-  endpoint: string = 'http://api.openweathermap.org'
+  endpoint: string = 'https://api.openweathermap.org'
 
   constructor(private http: HttpClient,
 

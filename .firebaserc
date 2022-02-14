@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "gmkr45y095ttgd4918k",
-    "weather": "gmkr45y095ttgd4918k"
-  },
-  "targets": {}
+    "default": "weather-2d7f5j"
+  }
 }

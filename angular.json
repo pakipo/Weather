@@ -42,7 +42,6 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/slick-carousel/slick/slick.min.js"
-
             ]
           },
           "configurations": {
@@ -113,6 +112,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Weather:build:production",
+            "firebaseProject": "gmkr45y095ttgd4918k",
+            "firebaseHostingSite": "gmkr45y095ttgd4918k"
           }
         }
       }

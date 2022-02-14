@@ -1,4 +1,7 @@
 {
+  "database": {
+    "rules": "database.rulse.json"
+  },
   "hosting": {
     "public": "dist/Weather",
     "ignore": [

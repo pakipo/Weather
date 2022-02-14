@@ -14,11 +14,12 @@ import { ICity } from '../../../shared/interfaces/City';
   styleUrls: ['./current-weather.component.scss']
 })
 export class CurrentWeatherComponent implements OnInit, OnDestroy {
-  sizeScreen: string = 'fullScreen';
-  mainIconPath: string = `../../../assets/img/icons/${this.sizeScreen}/mainIcons/`
+
+  sizeScreen!: string;
+  mainIconPath!: string;
   mainIcon!: string;
-  iconPath: string = `../../../assets/img/icons/${this.sizeScreen}/`
-  directionWindIconPath: string = `../../../assets/img/icons/${this.sizeScreen}/directionWind/`
+  iconPath!: string;
+  directionWindIconPath!: string;
   data!: IData;
   load: boolean = true;
   timer!: any;
@@ -37,7 +38,12 @@ export class CurrentWeatherComponent implements OnInit, OnDestroy {
     this.load = false
     this.date = this.dataServis.getCurrentDate()
     this.city = this.searchService.city
+
     this.sizeScreen = this.selectImgService.getPathIcons()
+    this.mainIconPath = `../../../assets/img/icons/${this.sizeScreen}/mainIcons/`
+    this.iconPath = `../../../assets/img/icons/${this.sizeScreen}/`
+    this.directionWindIconPath = `../../../assets/img/icons/${this.sizeScreen}/directionWind/`
+
     this.timer = this.dataServis.timer.subscribe(s => {
       let date = new Date();
       let minuts = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
