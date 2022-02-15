@@ -36,12 +36,17 @@ export class ForecastComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     let container = this.container.nativeElement;
     if (this.forecastService.forecastPeriod !== EPeriod.oneDay) {
+      this.render.setStyle(container, 'background-color', 'rgba(70,68,102,0.5)')
+      this.render.setStyle(container, 'padding', '0 5px')
+      this.render.setStyle(container, 'border-radius', '5px')
+      this.render.setStyle(container, 'box-shadow', '4px 4px 11px 0 rgba(36, 148, 234, 0.2)')
       this.render.listen(container, 'click', () => this.goToDetails(this.data.fullDate))
       this.render.listen(container, 'mouseenter',
         () => {
           this.render.setStyle(container, 'cursor', 'pointer')
         })
     }
+ 
   }
 
   goToDetails(date: number) {

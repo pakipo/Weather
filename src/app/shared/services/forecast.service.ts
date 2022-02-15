@@ -69,7 +69,7 @@ export class ForecastService {
     this.apiService.getOneCall({ lat: this.city.lat, lon: this.city.lon }).subscribe(res => {
       let data = res as IData;
       let arr = []
-      for (let i = 0; i < 3; i++) {
+      for (let i = 1; i < 4; i++) {
 
         arr.push(
           {
@@ -91,7 +91,7 @@ export class ForecastService {
       let data = res as IData;
       let arr = []
       console.log(data)
-      for (let i = 0; i < 7; i++) {
+      for (let i = 1; i < 8; i++) {
 
         arr.push(
           {
