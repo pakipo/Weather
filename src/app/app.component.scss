@@ -18,16 +18,18 @@
     box-shadow: 0px 10px 25px 1px rgba(50, 63, 221, 0.3);
 
     h2 {
-      font-family: 'The Nautigal', cursive;
-      font-weight: 700;
+      font-weight: 500;
       font-size: x-large;
       letter-spacing: 2px;
 
+
       &.title {
         margin: 0 10px;
+       
       }
 
       &.date {
+        font-family: 'The Nautigal',cursive;
         margin: 0 auto;
         font-weight: 500;
       }
@@ -209,7 +211,6 @@
     .mat-toolbar {
 
       h2 {
-        font-family: 'The Nautigal', cursive;
         font-weight: 600;
         font-size: larger;
         letter-spacing: normal;

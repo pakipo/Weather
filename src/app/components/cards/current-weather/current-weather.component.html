@@ -128,8 +128,9 @@
           <p class="pWind">
             <span>
               <img [src]="iconPath + selectImgService.getWindIcon(data.wind.speed)" />
-            </span>
-            {{roundingValues(data.wind.speed)}} м/c
+            </span><b>
+  {{roundingValues(data.wind.speed)}} м/c
+</b>
           </p>
         </div>
 
@@ -146,8 +147,9 @@
             <span>
               <img [src]="iconPath + 'humidityIcon.svg'" />
             </span>
-
-            {{data.main.humidity}}%
+            <b>
+              {{data.main.humidity}}%
+            </b>
           </p>
         </div>
 
@@ -156,8 +158,9 @@
             <span>
               <img [src]="iconPath + 'barometer.svg'" />
             </span>
-
-            {{ roundingValues(data.main.pressure * 0.75)}}mm
+            <b>
+              {{ roundingValues(data.main.pressure * 0.75)}}mm
+            </b>
           </p>
         </div>
       </div>

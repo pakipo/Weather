@@ -13,6 +13,7 @@ $padding: 20px;
 }
 
 .containerCurrWeath {
+  font-family: 'The Nautigal',cursive;
   position: relative;
   color: $color;
   padding: 20px 50px 10px 50px;
@@ -32,9 +33,7 @@ $padding: 20px;
     padding-top: 10px;
 
     p {
-      font-family: sans-serif;
       font-size: 40px;
-      font-weight: 500;
       color: $color;
     }
 
@@ -261,6 +260,7 @@ $padding: 20px;
   }
 
   .containerCurrWeatherMobile {
+    font-family: 'The Nautigal',cursive;
     display: block;
     position: relative;
     color: $color;
@@ -293,7 +293,7 @@ $padding: 20px;
     .tempWrap {
       display: flex;
       justify-content: space-around;
-      align-items:flex-end;
+      align-items: flex-end;
       border-bottom: 1px solid #aaa1a1;
       padding-bottom: 5px;
       font-size: 12px;
@@ -318,6 +318,7 @@ $padding: 20px;
       align-items: center;
       padding-top: 5px;
       font-size: 12px;
+      letter-spacing:2px;
     }
   }
 }
