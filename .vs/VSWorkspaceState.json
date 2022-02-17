@@ -5,9 +5,12 @@
     "\\src\\app",
     "\\src\\app\\components",
     "\\src\\app\\components\\cards",
-    "\\src\\app\\components\\cards\\forecast",
-    "\\src\\app\\shared"
+    "\\src\\app\\components\\cards\\current-weather",
+    "\\src\\app\\components\\cards\\daily-forecast",
+    "\\src\\app\\components\\main",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\src\\app\\components\\cards\\forecast\\forecast.component.ts",
   "PreviewInSolutionExplorer": false
 }
