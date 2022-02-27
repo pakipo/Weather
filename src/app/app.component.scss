@@ -74,7 +74,7 @@
   }
 
   .bcgBox {
-    min-height: 70vh;
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../assets/img/bcgImg/bcgDay.jpg);
@@ -114,6 +114,7 @@
       .contentWrap {
         margin: 0 auto;
         width: 90%;
+      
         background: rgb(33,21,62);
         background: linear-gradient(260deg, rgba(33,21,62,0.6) 33%, rgba(11,9,48,0.6) 68%);
       }

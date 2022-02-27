@@ -3,14 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\cards",
-    "\\src\\app\\components\\cards\\current-weather",
-    "\\src\\app\\components\\cards\\daily-forecast",
-    "\\src\\app\\components\\main",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\services"
+    "\\src\\app\\components"
   ],
-  "SelectedNode": "\\src\\app\\components\\cards\\forecast\\forecast.component.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }
